@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>炭火ダイニング 良月｜多田駅すぐ</title>
+<meta name="description" content="兵庫県川西市、多田駅すぐ。炭火焼き鳥、魚料理、韓国料理などを楽しめる炭火ダイニング 良月。">
+<style>
+:root{--bg:#f5f1ea;--paper:#fffdf9;--ink:#181715;--sub:#716b62;--line:#d8d0c5;--accent:#8b4334}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}a{color:inherit;text-decoration:none}img{width:100%;height:100%;object-fit:cover;display:block}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:40;background:rgba(245,241,234,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand small{display:block;letter-spacing:.18em;font-size:9px}.brand b{font-family:serif;font-size:28px;font-weight:500}.navlinks{display:flex;gap:24px;font-size:13px}.call{border:1px solid var(--ink);border-radius:999px;padding:11px 17px}
+.hero{padding:34px 0 88px}.hero-grid{display:grid;grid-template-columns:.9fr 1.5fr;gap:42px;align-items:end}.hero-photo{height:72vh;min-height:540px;border-radius:28px;overflow:hidden;background:#ddd}
+.kicker{font-size:11px;letter-spacing:.2em;color:var(--sub);margin-bottom:20px}h1,h2,h3{font-family:serif;font-weight:500}h1{font-size:clamp(48px,6.2vw,88px);line-height:1.05;margin:0 0 26px}.lead{font-family:serif;font-size:clamp(21px,2.3vw,31px);line-height:1.7;margin-bottom:28px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--ink);border-radius:999px;padding:13px 20px;font-size:13px}.btn.dark{background:var(--ink);color:white}
+section{padding:88px 0;border-top:1px solid var(--line)}.sectitle{display:grid;grid-template-columns:180px 1fr;gap:28px;margin-bottom:42px}.sectitle span{font-size:11px;letter-spacing:.18em;color:var(--sub)}.sectitle h2{font-size:clamp(32px,4vw,52px);margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.about p{font-size:16px;line-height:2;color:#3d3934}.about-photo{height:420px;border-radius:22px;overflow:hidden}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.food{background:var(--paper);border-radius:20px;overflow:hidden}.food .pic{height:300px;overflow:hidden;background:#ddd}.food .txt{padding:20px}.food h3{font-size:23px;margin:0 0 7px}.food p{margin:0;color:var(--sub);line-height:1.75;font-size:14px}
+.exterior{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:stretch}.exterior-photo{height:560px;border-radius:24px;overflow:hidden;background:#111}.exterior-copy{background:var(--paper);padding:36px;border-radius:24px;display:flex;flex-direction:column;justify-content:flex-end}.exterior-copy h3{font-size:34px;margin:0 0 16px}.exterior-copy p{color:var(--sub);line-height:1.9}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:18px}.reviewbox{background:var(--paper);border-radius:22px;padding:30px}.source{font-size:11px;letter-spacing:.15em;color:var(--sub)}.score{font-family:serif;font-size:48px;margin:12px 0 4px}.reviewcards{display:grid;gap:12px;margin-top:22px}.quote{border-top:1px solid var(--line);padding-top:16px;line-height:1.8}.quote b{display:block;font-family:serif;font-size:19px;margin-bottom:6px}.quote p{margin:0;color:var(--sub);font-size:14px}
+.menu{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.menu div{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:27px 18px}.menu small{letter-spacing:.14em;color:var(--sub)}.menu b{display:block;font-family:serif;font-size:20px;margin-top:7px}
+.access{display:grid;grid-template-columns:1fr 1fr;gap:30px}.info{background:var(--paper);border-radius:22px;padding:32px}.info dl{display:grid;grid-template-columns:110px 1fr;gap:13px 18px;margin:0}.info dt{color:var(--sub)}.info dd{margin:0;line-height:1.7}.map{min-height:410px;background:#e7e2da;border-radius:22px;display:flex;justify-content:center;align-items:center;text-align:center;padding:30px}
+footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;align-items:end}.mobile{display:none}
+
+/* 実写真への非破壊画像処理：内容は変えず、見え方のみ調整 */
+.food-shot{filter:brightness(1.05) contrast(1.09) saturate(1.12);transform:scale(1.025);transition:transform .5s ease}
+.food:hover .food-shot{transform:scale(1.055)}
+.hero-food{filter:brightness(1.04) contrast(1.07) saturate(1.08);transform:scale(1.02)}
+.yakitori{object-position:50% 53%;filter:brightness(1.09) contrast(1.10) saturate(1.14)}
+.mushibuta{object-position:50% 54%;filter:brightness(1.06) contrast(1.08) saturate(1.10)}
+.fish-korean{object-position:center center;filter:brightness(1.04) contrast(1.07) saturate(1.09)}
+.exterior-real{object-position:center 45%;filter:brightness(.94) contrast(1.10) saturate(.92) sepia(.04);transform:scale(1.015)}
+.exterior-photo{position:relative}.exterior-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.10));pointer-events:none}
+
+@media(max-width:800px){
+.wrap{width:min(100% - 28px,680px)}.navlinks{display:none}.nav{height:60px}.hero{padding-top:18px}.hero-grid,.about,.exterior,.reviews,.access{grid-template-columns:1fr}.hero-photo{order:1;height:55vh;min-height:420px;border-radius:20px}.hero-copy{order:2}h1{font-size:52px}.sectitle{grid-template-columns:1fr;gap:8px}section{padding:62px 0}.cards3{grid-template-columns:1fr}.food .pic{height:290px}.menu{grid-template-columns:1fr 1fr}.exterior-photo{height:500px}.about-photo{height:330px}.foot{display:block}.mobile{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:80;background:rgba(255,253,249,.97);border-top:1px solid var(--line);backdrop-filter:blur(12px)}.mobile a{text-align:center;padding:15px 5px;font-size:12px;border-right:1px solid var(--line)}.mobile a:first-child{background:var(--ink);color:white}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><small>SUMIBI DINING</small><b>良月</b></a>
+<div class="navlinks"><a href="#about">良月について</a><a href="#recommend">おすすめ</a><a href="#voice">お客様の声</a><a href="#access">アクセス</a></div>
+<a class="call" href="tel:0727921124">072-792-1124</a>
+</div></header>
+
+<main>
+<div class="wrap hero"><div class="hero-grid">
+<div class="hero-copy"><div class="kicker">KAWANISHI / TADA</div><h1>良い夜を、<br>良い月と。</h1>
+<div class="lead">多田駅から徒歩5秒。<br>炭火焼と酒を、気取らずゆっくり。</div>
+<div class="btns"><a class="btn dark" href="tel:0727921124">電話で問い合わせ</a><a class="btn" href="#recommend">料理を見る</a></div>
+</div>
+<!-- ご指定：最初の写真は「魚・韓国料理」で使用していた実写真 -->
+<div class="hero-photo"><img class="hero-food fish-korean" src="https://imgfp.hotp.jp/IMGH/83/48/P018218348/P018218348_480.jpg" alt="良月の料理"></div>
+</div></div>
+
+<section id="about"><div class="wrap">
+<div class="sectitle"><span>01 / ABOUT</span><h2>肩肘張らずに、<br>ちゃんと美味しい。</h2></div>
+<div class="about"><div><p>炭火で丁寧に焼き上げる焼き鳥を中心に、魚料理、韓国料理、オーブン料理まで。ひとりで一杯の日も、ふたりでゆっくり過ごす夜も、仲間と賑やかに囲む席も。</p><p>多田駅すぐ。普段使いできる居心地と、しっかり美味しい料理が良月の魅力です。</p></div>
+<div class="about-photo"><img class="fish-korean food-shot" src="https://imgfp.hotp.jp/IMGH/83/48/P018218348/P018218348_480.jpg" alt="良月の料理"></div></div>
+</div></section>
+
+<section id="recommend"><div class="wrap">
+<div class="sectitle"><span>02 / RECOMMEND</span><h2>まずは、良月らしい一皿から。</h2></div>
+<div class="cards3">
+
+<!-- Hot Pepper「やきとり（各種）」実写真 -->
+<div class="food"><div class="pic"><img class="food-shot yakitori" src="https://imgfp.hotp.jp/IMGH/85/06/P018218506/P018218506_480.jpg" alt="良月 やきとり各種"></div><div class="txt"><h3>炭火焼き鳥</h3><p>店主が炭火で丁寧に焼き上げる、ジューシーな焼き鳥。良月の定番です。</p></div></div>
+
+<!-- ご指定：「多彩な串・一品料理」から「むし豚」へ変更 -->
+<div class="food"><div class="pic"><img class="food-shot mushibuta" src="https://imgfp.hotp.jp/IMGH/85/01/P018218501/P018218501_480.jpg" alt="良月 むし豚 キムチ付"></div><div class="txt"><h3>むし豚〈キムチ付〉</h3><p>旨みのあるジューシーな蒸し豚をキムチと一緒に。良月の人気韓国料理です。</p></div></div>
+
+<div class="food"><div class="pic"><img class="food-shot fish-korean" src="https://imgfp.hotp.jp/IMGH/83/48/P018218348/P018218348_480.jpg" alt="良月 魚料理・韓国料理"></div><div class="txt"><h3>魚・韓国料理</h3><p>焼き鳥だけでなく、魚料理や韓国料理まで楽しめるのも良月の魅力。</p></div></div>
+
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sectitle"><span>03 / SPACE</span><h2>多田駅を出たら、すぐそこ。</h2></div>
+<div class="exterior">
+<!-- Hot Pepper「こだわりの空間」で使用されている実店舗外観 -->
+<div class="exterior-photo"><img class="exterior-real" src="https://imgfp.hotp.jp/IMGH/85/55/P018218555/P018218555_480.jpg" alt="炭火ダイニング 良月 店舗外観"></div>
+<div class="exterior-copy"><div class="kicker">SHOP FRONT</div><h3>灯りの先に、良月。</h3><p>能勢電鉄 多田駅からすぐ。実店舗の外観写真をそのまま活かし、看板と入口の灯りが自然に引き立つよう、明暗とコントラストのみを調整しています。</p><a class="btn dark" href="#access">アクセスを見る</a></div>
+</div>
+</div></section>
+
+<section id="voice"><div class="wrap">
+<div class="sectitle"><span>04 / VOICE</span><h2>お客様から届いた声。</h2></div>
+<div class="reviews">
+<div class="reviewbox">
+<div class="source">GOOGLE BUSINESS PROFILE</div><div class="score">4.3</div><div>★★★★★ <span style="color:var(--sub);font-size:13px">54 reviews</span></div>
+<div class="reviewcards">
+<div class="quote"><b>料理がおいしい</b><p>焼き鳥や魚料理など、料理の味を評価する声が多く見られます。</p></div>
+<div class="quote"><b>落ち着いて食事ができる</b><p>駅近ながら、ゆっくり過ごせる雰囲気も好評です。</p></div>
+<div class="quote"><b>普段使いしやすい</b><p>友人との食事や仕事帰りなど、気軽に立ち寄れるお店として利用されています。</p></div>
+</div>
+</div>
+<div class="reviewbox">
+<div class="source">HOT PEPPER GOURMET</div><div class="score">8</div><div style="color:var(--sub)">掲載口コミ</div>
+<div class="reviewcards">
+<div class="quote"><b>「落ち着ける場所」</b><p>友人・知人との利用で、落ち着いて過ごせる場所として高く評価されています。</p></div>
+<div class="quote"><b>料理とお酒をゆっくり</b><p>キムチや唐揚げなど、お酒に合う料理を評価する口コミがあります。</p></div>
+<div class="quote"><b>アットホームな雰囲気</b><p>女性同士でも入りやすい、親しみやすい雰囲気という声もあります。</p></div>
+</div>
+</div>
+</div>
+<p style="font-size:12px;color:var(--sub);margin-top:18px">※口コミは各掲載サービスの公開情報をもとに要点を編集・要約しています。評価・件数は変動する場合があります。</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="sectitle"><span>05 / MENU</span><h2>その日の気分で、いろいろ。</h2></div>
+<div class="menu"><div><small>SUMIBI</small><b>炭火焼</b></div><div><small>KOREAN</small><b>韓国料理</b></div><div><small>OVEN</small><b>オーブン料理</b></div><div><small>SEAFOOD</small><b>魚料理</b></div><div><small>DRINK</small><b>お酒</b></div></div>
+</div></section>
+
+<section id="access"><div class="wrap">
+<div class="sectitle"><span>06 / ACCESS</span><h2>多田駅から、徒歩5秒。</h2></div>
+<div class="access">
+<div class="info"><dl><dt>店名</dt><dd>炭火ダイニング 良月</dd><dt>住所</dt><dd>〒666-0124<br>兵庫県川西市多田桜木2-11-33</dd><dt>営業時間</dt><dd>火〜日・祝日・祝前日 17:00〜24:00<br>料理L.O. 23:00 / ドリンクL.O. 23:00</dd><dt>定休日</dt><dd>月曜日</dd><dt>電話</dt><dd><a href="tel:0727921124"><b>072-792-1124</b></a></dd></dl></div>
+<a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E3%83%80%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0+%E8%89%AF%E6%9C%88+%E5%B7%9D%E8%A5%BF%E5%B8%82"><div><h3 style="font-size:30px;margin:0 0 12px">Google Map</h3><span style="color:var(--sub)">地図・経路を開く →</span></div></a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot"><div class="brand"><small>SUMIBI DINING</small><b>良月</b><p style="color:var(--sub);font-size:12px">兵庫県川西市多田桜木2-11-33</p></div><a class="btn dark" href="tel:0727921124">072-792-1124</a></div></footer>
+<div class="mobile"><a href="tel:0727921124">電話する</a><a href="#recommend">料理</a><a href="#access">アクセス</a></div>
+</body></html>
