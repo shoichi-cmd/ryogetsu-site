@@ -17,14 +17,19 @@ section{padding:52px 0;border-top:1px solid var(--line)}.sectionhead{display:fle
 .featured{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--paper);border-radius:18px;padding:22px}.card h3{font-family:serif;font-size:23px;font-weight:500;margin:0 0 8px}.card p{margin:0;color:var(--sub);line-height:1.7;font-size:14px}.price{margin-top:12px;font-weight:600}
 .menu-list{background:var(--paper);border-radius:20px;overflow:hidden}.row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 22px;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.name b{display:block;font-size:16px}.name small{display:block;color:var(--sub);margin-top:5px;line-height:1.5}.yen{white-space:nowrap;font-weight:600}
 footer{padding:48px 0 90px;border-top:1px solid var(--line);text-align:center;color:var(--sub);font-size:12px}
+
+.header-logo{width:72px;height:50px;object-fit:contain;display:block}
+.menu-hero-logo{width:min(250px,58vw);height:auto;object-fit:contain;display:block;margin:0 0 26px}
+.footer-brand-logo{width:110px;height:auto;object-fit:contain;margin:0 auto 14px;display:block}
+
 @media(max-width:760px){.featured{grid-template-columns:1fr}.hero{padding-top:46px}.row{grid-template-columns:1fr auto;padding:16px}.sectionhead h2{font-size:28px}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html">炭火ダイニング 良月</a><a class="back" href="index.html">← トップへ戻る</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html"><img class="header-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ"></a><a class="back" href="index.html">← トップへ戻る</a></div></header>
 <main>
 <div class="wrap hero">
-<div class="kicker">RYOGETSU MENU</div>
+<img class="menu-hero-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 Ryo-Getsu ロゴ"><div class="kicker">RYOGETSU MENU</div>
 <h1>お品書き</h1>
 <div class="lead">炭火の香りをまとった焼き鳥から、<br>韓国料理、オーブン料理、一品料理まで。</div>
 <div class="notice">※以下はHot Pepper掲載情報（最終更新 2013年12月9日）をもとに構成しています。価格・内容は現在と異なる場合があります。最新情報は店舗へお問い合わせください。</div>
@@ -100,6 +105,6 @@ footer{padding:48px 0 90px;border-top:1px solid var(--line);text-align:center;co
 </div>
 </div></section>
 </main>
-<footer>炭火ダイニング 良月｜兵庫県川西市多田桜木2-11-33｜072-792-1124</footer>
+<footer><img class="footer-brand-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ">炭火ダイニング 良月｜兵庫県川西市多田桜木2-11-33｜072-792-1124</footer>
 </body>
 </html>

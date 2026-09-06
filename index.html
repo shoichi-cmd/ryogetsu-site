@@ -62,6 +62,31 @@ footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;
 .exterior-photo{position:relative}.exterior-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.10));pointer-events:none}
 
 .faq{display:grid;gap:12px}.faq details{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 22px}.faq summary{cursor:pointer;font-family:serif;font-size:19px}.faq p{margin:14px 0 0;color:var(--sub);line-height:1.85}
+
+.logo-img{display:block;object-fit:contain;height:auto}
+.header-logo{width:78px;max-height:50px}
+.hero-brandmark{width:min(260px,62vw);margin:0 0 24px}
+.brand-panel{display:grid;grid-template-columns:220px 1fr;gap:46px;align-items:center;background:var(--paper);padding:38px;border-radius:24px}
+.brand-panel .logo-img{width:100%;max-height:250px}
+.brand-panel p{color:var(--sub);line-height:1.95;margin:10px 0 0}
+.footer-logo{width:125px;max-height:120px;margin-bottom:14px}
+
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.diff-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.diff-no{font-size:11px;letter-spacing:.18em;color:var(--sub)}
+.diff-card h3{font-size:30px;margin:34px 0 14px;line-height:1.45}
+.diff-card p{color:var(--sub);line-height:1.9;margin:0}
+.diff-tag{display:inline-block;margin-top:22px;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:8px 12px;width:max-content}
+.diff-lead{font-family:serif;font-size:clamp(26px,3.4vw,46px);line-height:1.55;margin:0 0 36px}
+@media(max-width:800px){.diff-grid{grid-template-columns:1fr}.diff-card{min-height:auto}.diff-card h3{font-size:27px;margin-top:24px}}
+
+@media(max-width:800px){
+.header-logo{width:62px;max-height:42px}
+.hero-brandmark{width:180px;margin-bottom:18px}
+.brand-panel{grid-template-columns:1fr;padding:28px}
+.brand-panel .logo-img{width:170px;margin:auto}
+}
+
 @media(max-width:800px){
 .wrap{width:min(100% - 28px,680px)}.navlinks{display:none}.nav{height:60px}.hero{padding-top:18px}.hero-grid,.about,.exterior,.reviews,.access{grid-template-columns:1fr}.hero-photo{order:1;height:55vh;min-height:420px;border-radius:20px}.hero-copy{order:2}h1{font-size:52px}.sectitle{grid-template-columns:1fr;gap:8px}section{padding:62px 0}.cards3{grid-template-columns:1fr}.food .pic{height:290px}.menu{grid-template-columns:1fr 1fr}.exterior-photo{height:500px}.about-photo{height:330px}.foot{display:block}.mobile{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:80;background:rgba(255,253,249,.97);border-top:1px solid var(--line);backdrop-filter:blur(12px)}.mobile a{text-align:center;padding:15px 5px;font-size:12px;border-right:1px solid var(--line)}.mobile a:first-child{background:var(--ink);color:white}
 }
@@ -69,16 +94,16 @@ footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;
 </head>
 <body>
 <header><div class="wrap nav">
-<a class="brand" href="#"><small>SUMIBI DINING</small><b>良月</b></a>
+<a class="brand" href="#"><img class="logo-img header-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 Ryo-Getsu ロゴ"></a>
 <div class="navlinks"><a href="#about">良月について</a><a href="#recommend">おすすめ</a><a href="#voice">お客様の声</a><a href="#access">アクセス</a></div>
 <a class="call" href="tel:0727921124">072-792-1124</a>
 </div></header>
 
 <main>
 <div class="wrap hero"><div class="hero-grid">
-<div class="hero-copy"><div class="kicker">KAWANISHI / TADA</div><h1>良い夜を、<br>良い月と。</h1>
-<div class="lead">多田駅から徒歩5秒。<br>炭火焼と酒を、気取らずゆっくり。</div>
-<div class="btns"><a class="btn dark" href="tel:0727921124">電話で問い合わせ</a><a class="btn" href="menu.html">お品書きを見る</a></div>
+<div class="hero-copy"><img class="logo-img hero-brandmark" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ"><div class="kicker">KAWANISHI / TADA</div><h1>良い夜を、<br>良い月と。</h1>
+<div class="lead">多田駅すぐ。<br>焼き鳥だけじゃない、<br>大人の炭火ダイニング。</div>
+<div class="btns"><a class="btn dark" href="tel:0727921124">電話で問い合わせ</a><a class="btn" href="#brand">良月の魅力を見る</a></div>
 </div>
 <!-- ご指定：最初の写真は「魚・韓国料理」で使用していた実写真 -->
 <div class="hero-photo"><img class="hero-food fish-korean" src="https://imgfp.hotp.jp/IMGH/83/48/P018218348/P018218348_480.jpg" alt="良月の料理"></div>
@@ -86,7 +111,7 @@ footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;
 
 <section id="about"><div class="wrap">
 <div class="sectitle"><span>01 / ABOUT</span><h2>肩肘張らずに、<br>ちゃんと美味しい。</h2></div>
-<div class="about"><div><p>炭火で丁寧に焼き上げる焼き鳥を中心に、魚料理、韓国料理、オーブン料理まで。ひとりで一杯の日も、ふたりでゆっくり過ごす夜も、仲間と賑やかに囲む席も。</p><p>多田駅すぐ。普段使いできる居心地と、しっかり美味しい料理が良月の魅力です。</p></div>
+<div class="about"><div><p>炭火で丁寧に焼き上げる焼き鳥を中心に、魚料理、韓国料理、オーブン料理まで。ひとりで一杯の日も、ふたりでゆっくり過ごす夜も、仲間と賑やかに囲む席も。</p><p>多田駅すぐ。焼き鳥専門店でも、大型宴会店でもない。料理の幅と落ち着いた時間を楽しめる“大人の普段使い”が良月の魅力です。</p></div>
 <div class="about-photo"><img class="fish-korean food-shot" src="https://imgfp.hotp.jp/IMGH/83/48/P018218348/P018218348_480.jpg" alt="良月の料理"></div></div>
 </div></section>
 
@@ -97,6 +122,40 @@ footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;
 <p>川西市で気軽に入れる居酒屋、多田駅近くで焼き鳥を楽しめる店として、日常使いしていただける一軒です。</p>
 </div><div class="about-photo"><img class="exterior-real" src="https://imgfp.hotp.jp/IMGH/85/55/P018218555/P018218555_480.jpg" alt="川西市多田駅すぐ 炭火ダイニング良月の店舗外観"></div></div>
 </div></section>
+
+
+<section id="brand"><div class="wrap">
+<div class="sectitle"><span>WHY RYO-GETSU</span><h2>良月が選ばれる、<br>3つの理由。</h2></div>
+<p class="diff-lead">焼き鳥だけじゃない。<br>大人数で騒ぐだけでもない。<br>“今日はちょっと美味しいものを”に応える店。</p>
+<div class="diff-grid">
+  <div class="diff-card">
+    <div>
+      <div class="diff-no">01 / FOOD</div>
+      <h3>焼き鳥だけじゃない、<br>料理の幅。</h3>
+      <p>炭火で丁寧に焼く焼き鳥を中心に、魚料理、韓国料理、オーブン料理まで。その日の気分に合わせて、好きなものを少しずつ楽しめます。</p>
+    </div>
+    <span class="diff-tag">炭火 × 魚 × 韓国料理</span>
+  </div>
+  <div class="diff-card">
+    <div>
+      <div class="diff-no">02 / TIME</div>
+      <h3>宴会だけじゃない、<br>大人の普段使い。</h3>
+      <p>一人で一杯。二人でゆっくり。気の合う仲間と少人数で。賑やかさよりも、落ち着いて食べて飲める時間を大切にしています。</p>
+    </div>
+    <span class="diff-tag">ひとり・ふたり・少人数</span>
+  </div>
+  <div class="diff-card">
+    <div>
+      <div class="diff-no">03 / ACCESS</div>
+      <h3>多田駅から、<br>ほぼ駅前。</h3>
+      <p>能勢電鉄 多田駅からすぐ。仕事帰りにも、待ち合わせにも、ふと思い立った夜にも立ち寄りやすい距離感です。</p>
+    </div>
+    <span class="diff-tag">多田駅すぐ</span>
+  </div>
+</div>
+</div></section>
+
+
 <section id="recommend"><div class="wrap">
 <div class="sectitle"><span>03 / RECOMMEND</span><h2>まずは、良月らしい一皿から。</h2></div>
 <div class="cards3">
@@ -173,6 +232,6 @@ footer{padding:50px 0 110px;border-top:1px solid var(--line)}.foot{display:flex;
 </div></section>
 </main>
 
-<footer><div class="wrap foot"><div class="brand"><small>SUMIBI DINING</small><b>良月</b><p style="color:var(--sub);font-size:12px">兵庫県川西市多田桜木2-11-33</p></div><a class="btn dark" href="tel:0727921124">072-792-1124</a></div></footer>
+<footer><div class="wrap foot"><div class="brand"><img class="logo-img footer-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ"><p style="color:var(--sub);font-size:12px">兵庫県川西市多田桜木2-11-33</p></div><a class="btn dark" href="tel:0727921124">072-792-1124</a></div></footer>
 <div class="mobile"><a href="tel:0727921124">電話する</a><a href="#recommend">料理</a><a href="#access">アクセス</a></div>
 </body></html>
