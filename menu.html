@@ -9,8 +9,8 @@
 :root{--bg:#f5f1ea;--paper:#fffdf9;--ink:#181715;--sub:#716b62;--line:#d8d0c5}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}a{color:inherit;text-decoration:none}
 .wrap{width:min(1080px,calc(100% - 36px));margin:auto}
-header{position:sticky;top:0;background:rgba(245,241,234,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);z-index:20}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:serif;font-size:26px}.back{font-size:13px;border:1px solid var(--ink);border-radius:999px;padding:10px 16px}
+header{position:sticky;top:0;background:#111;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.12);z-index:20}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:serif;font-size:26px}.back{font-size:13px;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:999px;padding:10px 16px}
 .hero{padding:70px 0 46px}.kicker{font-size:11px;letter-spacing:.2em;color:var(--sub)}h1{font-family:serif;font-size:clamp(42px,6vw,76px);font-weight:500;margin:12px 0 16px}.lead{font-family:serif;font-size:20px;line-height:1.8;color:#393631}
 .notice{background:#eee7dc;border-radius:16px;padding:18px 20px;color:#5e574e;font-size:13px;line-height:1.8;margin-top:26px}
 section{padding:52px 0;border-top:1px solid var(--line)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.sectionhead h2{font-family:serif;font-size:34px;font-weight:500;margin:0}.sectionhead span{font-size:11px;letter-spacing:.15em;color:var(--sub)}
@@ -18,11 +18,71 @@ section{padding:52px 0;border-top:1px solid var(--line)}.sectionhead{display:fle
 .menu-list{background:var(--paper);border-radius:20px;overflow:hidden}.row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 22px;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}.name b{display:block;font-size:16px}.name small{display:block;color:var(--sub);margin-top:5px;line-height:1.5}.yen{white-space:nowrap;font-weight:600}
 footer{padding:48px 0 90px;border-top:1px solid var(--line);text-align:center;color:var(--sub);font-size:12px}
 
-.header-logo{width:72px;height:50px;object-fit:contain;display:block}
+.header-logo{width:72px;height:50px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
 .menu-hero-logo{width:min(250px,58vw);height:auto;object-fit:contain;display:block;margin:0 0 26px}
 .footer-brand-logo{width:110px;height:auto;object-fit:contain;margin:0 auto 14px;display:block}
 
 @media(max-width:760px){.featured{grid-template-columns:1fr}.hero{padding-top:46px}.row{grid-template-columns:1fr auto;padding:16px}.sectionhead h2{font-size:28px}}
+
+header{background:#0b0b0b!important;border-bottom:1px solid rgba(255,255,255,.10)!important}
+.nav{height:74px!important}
+.header-logo{width:88px!important;height:54px!important;filter:brightness(0) invert(1)!important}
+.back{border:1px solid rgba(255,255,255,.75)!important;color:#fff!important;background:transparent!important}
+.menu-hero-logo{width:min(210px,52vw)!important;margin-bottom:20px!important}
+@media(max-width:760px){
+  .nav{height:64px!important}
+  .header-logo{width:70px!important;height:44px!important}
+  .back{padding:8px 12px!important;font-size:12px!important}
+}
+
+
+/* unified black footer */
+.site-footer{
+  background:#0b0b0b;
+  color:#fff;
+  padding:48px 0 34px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.site-footer .footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+.site-footer .footer-brand-logo{
+  width:110px;
+  max-height:95px;
+  object-fit:contain;
+  filter:brightness(0) invert(1);
+  display:block;
+}
+.site-footer .footer-info{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  text-align:right;
+}
+.site-footer .footer-phone{
+  color:#fff;
+  font-size:22px;
+  letter-spacing:.03em;
+  text-decoration:none;
+}
+.site-footer .footer-address{
+  color:rgba(255,255,255,.72);
+  font-size:13px;
+  line-height:1.7;
+}
+@media(max-width:800px){
+  .site-footer{padding:34px 0 28px}
+  .site-footer .footer-inner{flex-direction:column;align-items:flex-start}
+  .site-footer .footer-info{justify-content:flex-start;text-align:left;gap:10px;flex-direction:column}
+  .site-footer .footer-brand-logo{width:88px}
+  .site-footer .footer-phone{font-size:20px}
+}
+
 </style>
 </head>
 <body>
@@ -105,6 +165,14 @@ footer{padding:48px 0 90px;border-top:1px solid var(--line);text-align:center;co
 </div>
 </div></section>
 </main>
-<footer><img class="footer-brand-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ">炭火ダイニング 良月｜兵庫県川西市多田桜木2-11-33｜072-792-1124</footer>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img class="footer-brand-logo" src="assets/ryogetsu-logo.png" alt="炭火ダイニング 良月 ロゴ">
+    <div class="footer-info">
+      <a class="footer-phone" href="tel:0727921124">072-792-1124</a>
+      <div class="footer-address">〒666-0124 兵庫県川西市多田桜木2-11-33</div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
